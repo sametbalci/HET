@@ -8,7 +8,7 @@ function propTypesTemplate(
     plugins.push("typescript");
   }
   const typeScriptTpl = template.smart({ plugins });
-  props[0].typeAnnotation.typeAnnotation.id.name = "_SVGProps";
+  props[0].typeAnnotation.typeAnnotation.id.itemTitle = "_SVGProps";
   return typeScriptTpl.ast`${imports}
       ${interfaces}
     

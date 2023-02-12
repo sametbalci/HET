@@ -1,37 +1,37 @@
 const categoryData = [
   {
     id: 'category-1',
-    title: 'Restaurant',
+    itemTitle: 'Restaurant',
     image: require('@/assets/images/categoryImage/restaurant1.png'),
   },
   {
     id: 'category-2',
-    title: 'Kafe',
+    itemTitle: 'Kafe',
     image: require('@/assets/images/categoryImage/coffee1.png'),
   },
   {
     id: 'category-3',
-    title: 'Spor Merkezi',
+    itemTitle: 'Spor Merkezi',
     image: require('@/assets/images/categoryImage/weights1.png'),
   },
   {
     id: 'category-4',
-    title: 'Müze',
+    itemTitle: 'Müze',
     image: require('@/assets/images/categoryImage/museum1.png'),
   },
   {
     id: 'category-5',
-    title: 'AVM',
+    itemTitle: 'AVM',
     image: require('@/assets/images/categoryImage/supermarket1.png'),
   },
   {
     id: 'category-6',
-    title: 'Tiyatro',
+    itemTitle: 'Tiyatro',
     image: require('@/assets/images/categoryImage/theatre1.png'),
   },
   {
     id: 'category-7',
-    title: 'Konser',
+    itemTitle: 'Konser',
     image: require('@/assets/images/categoryImage/concert1.png'),
   },
 ];

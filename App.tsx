@@ -9,12 +9,15 @@ import React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {RootStackScreen} from '@/navigation';
+import { SafeAreaView } from "react-native";
 
 function App() {
   return (
-    <NavigationContainer>
-      <RootStackScreen initial={'Walkthrough'} />
-    </NavigationContainer>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+      <NavigationContainer>
+        <RootStackScreen initial={'Walkthrough'} />
+      </NavigationContainer>
+    </SafeAreaView>
   );
 }
 

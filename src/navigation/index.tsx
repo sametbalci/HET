@@ -8,10 +8,13 @@ import {rs, rsui} from '@/utils';
 import * as Icons from '@/components/icons/BottomBar';
 import Info from '@/views/Info';
 import Settings from '@/views/Settings';
+import CategoryItems from '@/views/Home/CategoryItems';
+import ItemDetail from '@/views/Home/ItemDetail';
 
 const RootStack = createNativeStackNavigator<RootStackProps>();
 const WalkthroughStack = createNativeStackNavigator<WalkthroughStackProps>();
 const BottomBar = createBottomTabNavigator<BottomBarProps>();
+const Stack = createNativeStackNavigator<StackProps>();
 
 type Props = {
   initial: keyof RootStackProps;
@@ -32,6 +35,11 @@ export const RootStackScreen = ({initial}: Props) => {
         <RootStack.Screen
           name={'Main'}
           component={BottomBarScreen}
+          options={{gestureEnabled: false}}
+        />
+        <RootStack.Screen
+          name={'Detail'}
+          component={StackScreens}
           options={{gestureEnabled: false}}
         />
       </RootStack.Navigator>
@@ -63,6 +71,23 @@ const WalkthroughScreen = () => {
   );
 };
 
+const StackScreens = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen
+        name={'CategoryDetail'}
+        component={CategoryItems}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={'LocationDetail'}
+        component={ItemDetail}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+  );
+};
+
 export const BottomBarScreen = () => {
   const {bottom} = useSafeAreaInsets();
   return (
@@ -71,8 +96,8 @@ export const BottomBarScreen = () => {
         headerShown: false,
         tabBarStyle: {
           ...styles.tabBarStyle,
-          paddingBottom: bottom + rsui(10),
-          height: bottom + rsui(60),
+          paddingBottom: bottom + rsui(7),
+          height: bottom + rsui(35),
         },
         tabBarActiveTintColor: '#000',
         tabBarInactiveTintColor: '#000',

@@ -1,21 +1,20 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
-import * as Icons from '@/components/icons';
 import {rs, rsui} from '@/utils';
 
 const Info = () => {
   return (
     <SafeAreaView style={{backgroundColor: '#FBFBFB', height: 1000}}>
-      <Text style={{fontSize: 48, left: rs(25), top: rsui(20)}}>Yardım</Text>
+      <Text style={{fontSize: 48, left: rs(25), top: rsui(5)}}>Yardım</Text>
       <View
         style={{
           alignItems: 'center',
-          top: rsui(60),
+          top: rsui(15),
         }}>
         <View
           style={{
-            width: 345,
-            height: 350,
+            width: rs(330),
+            height: rsui(180),
             backgroundColor: '#fff',
             borderRadius: 10,
             shadowColor: '#000',
@@ -33,7 +32,7 @@ const Info = () => {
               style={{
                 fontFamily: 'PlusJakartaSans-Regular',
                 fontWeight: '600',
-                fontSize: 16,
+                fontSize: rsui(7),
                 left: rs(20),
                 top: rsui(10),
               }}>
@@ -42,7 +41,7 @@ const Info = () => {
             <Text
               style={{
                 fontFamily: 'PlusJakartaSans-Regular',
-                fontSize: 18,
+                fontSize: rsui(8),
                 left: rs(20),
                 top: rsui(20),
               }}>
@@ -58,12 +57,12 @@ const Info = () => {
               }}
             />
           </View>
-          <View style={{top: rsui(40)}}>
+          <View style={{top: rsui(30)}}>
             <Text
               style={{
                 fontFamily: 'PlusJakartaSans-Regular',
                 fontWeight: '600',
-                fontSize: 16,
+                fontSize: rsui(7),
                 left: rs(20),
                 top: rsui(10),
               }}>
@@ -72,7 +71,7 @@ const Info = () => {
             <Text
               style={{
                 fontFamily: 'PlusJakartaSans-Regular',
-                fontSize: 18,
+                fontSize: rsui(8),
                 left: rs(20),
                 top: rsui(20),
               }}>
@@ -88,12 +87,12 @@ const Info = () => {
               }}
             />
           </View>
-          <View style={{top: rsui(80)}}>
+          <View style={{top: rsui(60)}}>
             <Text
               style={{
                 fontFamily: 'PlusJakartaSans-Regular',
                 fontWeight: '600',
-                fontSize: 16,
+                fontSize: rsui(7),
                 left: rs(20),
                 top: rsui(10),
               }}>
@@ -102,7 +101,7 @@ const Info = () => {
             <Text
               style={{
                 fontFamily: 'PlusJakartaSans-Regular',
-                fontSize: 18,
+                fontSize: rsui(8),
                 left: rs(20),
                 top: rsui(20),
               }}>

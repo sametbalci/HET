@@ -1,24 +1,27 @@
 import React from 'react';
-import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import { Image, Platform, SafeAreaView, StatusBar, Text, TouchableOpacity, View } from "react-native";
 import {useAppNavigation} from '@/utils/hooks';
 import * as Icons from '@/components/icons';
 import {rs, rsui} from '@/utils';
 
-const Walkthrough1 = () => {
+const Walkthrough3 = () => {
   const navigator = useAppNavigation();
   return (
-    <SafeAreaView style={{backgroundColor: '#fff', height: 1000}}>
+    <SafeAreaView
+      style={{
+        backgroundColor: "#fff", height: 1000, flex: 1,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+      }}>
       <View style={{alignItems: 'center'}}>
         <Image source={require('@/assets/images/walkthrough3.png')} />
       </View>
       <View style={{left: rs(30), top: rsui(20), backgroundColor: '#fff'}}>
         <Text
           style={{
-            fontSize: 50,
+            fontSize: rsui(21),
             textAlign: 'left',
             fontFamily: 'Plus Jakarta Sans',
           }}>
-          Hayatta{'\n'}
           <Text
             style={{
               fontWeight: 'bold',
@@ -27,21 +30,24 @@ const Walkthrough1 = () => {
             }}>
             Engel
           </Text>
-          {'\n'}Tanımayan{'\n'}Bir{'\n'}Uygulama
+          leri
+          {'\n'}Hep{'\n'}
+          <Text style={{fontWeight: 'bold'}}>Beraber</Text>
+          {'\n'}Aşıyoruz!
         </Text>
       </View>
       <View
-        style={{alignItems: 'center', top: rsui(130), backgroundColor: '#fff'}}>
+        style={{alignItems: 'center', top: rsui(90), backgroundColor: '#fff'}}>
         <Icons.Point3 />
       </View>
-      <View style={{top: rsui(115)}}>
+      <View style={{top: rsui(83), flexDirection: 'row'}}>
         <TouchableOpacity
           style={{left: rs(30)}}
           onPress={() => navigator.navigate('Walkthrough', {screen: 'Two'})}>
           <Text style={{color: '#1C215D', textAlign: 'left'}}>Önceki</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{left: rs(300), bottom: rsui(16), width: rs(50)}}
+          style={{left: rs(255), width: rs(50)}}
           onPress={() => navigator.navigate('Main', {screen: 'Home'})}>
           <Text style={{color: '#1C215D', textAlign: 'right'}}>Bitti</Text>
         </TouchableOpacity>
@@ -50,4 +56,4 @@ const Walkthrough1 = () => {
   );
 };
 
-export default Walkthrough1;
+export default Walkthrough3;

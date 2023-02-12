@@ -1,24 +1,27 @@
 import React from 'react';
-import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import { Image, Platform, SafeAreaView, StatusBar, Text, TouchableOpacity, View } from "react-native";
 import {useAppNavigation} from '@/utils/hooks';
 import * as Icons from '@/components/icons';
 import {rs, rsui} from '@/utils';
 
-const Walkthrough1 = () => {
+const Walkthrough2 = () => {
   const navigator = useAppNavigation();
   return (
-    <SafeAreaView style={{backgroundColor: '#fff', height: 1000}}>
+    <SafeAreaView
+      style={{
+        backgroundColor: "#fff", height: 1000, flex: 1,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+      }}>
       <View style={{alignItems: 'center'}}>
         <Image source={require('@/assets/images/walkthrough2.png')} />
       </View>
       <View style={{left: rs(30), top: rsui(20), backgroundColor: '#fff'}}>
         <Text
           style={{
-            fontSize: 50,
+            fontSize: rsui(21),
             textAlign: 'left',
             fontFamily: 'Plus Jakarta Sans',
           }}>
-          Hayatta{'\n'}
           <Text
             style={{
               fontWeight: 'bold',
@@ -27,21 +30,21 @@ const Walkthrough1 = () => {
             }}>
             Engel
           </Text>
-          {'\n'}Tanımayan{'\n'}Bir{'\n'}Uygulama
+          {'\n'}Tanımayan{'\n'}Her{'\n'}Yere{'\n'}Gidin!
         </Text>
       </View>
       <View
-        style={{alignItems: 'center', top: rsui(130), backgroundColor: '#fff'}}>
+        style={{alignItems: 'center', top: rsui(60), backgroundColor: '#fff'}}>
         <Icons.Point2 />
       </View>
-      <View style={{top: rsui(115)}}>
+      <View style={{top: rsui(54), flexDirection: 'row'}}>
         <TouchableOpacity
           style={{left: rs(30)}}
           onPress={() => navigator.navigate('Walkthrough', {screen: 'One'})}>
           <Text style={{color: '#1C215D', textAlign: 'left'}}>Önceki</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{left: rs(300), bottom: rsui(17), width: rs(50)}}
+          style={{left: rs(255), width: rs(50)}}
           onPress={() => navigator.navigate('Walkthrough', {screen: 'Three'})}>
           <Text style={{color: '#1C215D', textAlign: 'right'}}>Sonraki</Text>
         </TouchableOpacity>
@@ -50,4 +53,4 @@ const Walkthrough1 = () => {
   );
 };
 
-export default Walkthrough1;
+export default Walkthrough2;

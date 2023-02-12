@@ -6,16 +6,16 @@ import {rs, rsui} from '@/utils';
 const Settings = () => {
   return (
     <SafeAreaView style={{backgroundColor: '#FBFBFB', height: 1000}}>
-      <Text style={{fontSize: 48, left: rs(25), top: rsui(20)}}>Ayarlar</Text>
+      <Text style={{fontSize: 48, left: rs(25), top: rsui(5)}}>Ayarlar</Text>
       <View
         style={{
           alignItems: 'center',
-          top: rsui(60),
+          top: rsui(15),
         }}>
         <View
           style={{
-            width: 345,
-            height: 231,
+            width: rs(330),
+            height: rsui(100),
             backgroundColor: '#fff',
             borderRadius: 10,
             shadowColor: '#000',
@@ -28,11 +28,11 @@ const Settings = () => {
 
             elevation: 3,
           }}>
-          <View style={{flexDirection: 'row', left: rs(15), top: rsui(20)}}>
+          <View style={{flexDirection: 'row', left: rs(15), top: rsui(10)}}>
             <Icons.Star />
             <Text
               style={{
-                fontSize: 19,
+                fontSize: rsui(9),
                 fontFamily: 'PlusJakartaSans-Regular',
                 left: rs(20),
                 bottom: rsui(1),
@@ -40,11 +40,11 @@ const Settings = () => {
               Bizi Puanla
             </Text>
           </View>
-          <View style={{flexDirection: 'row', left: rs(15), top: rsui(50)}}>
+          <View style={{flexDirection: 'row', left: rs(15), top: rsui(32)}}>
             <Icons.Share />
             <Text
               style={{
-                fontSize: 19,
+                fontSize: rsui(9),
                 fontFamily: 'PlusJakartaSans-Regular',
                 left: rs(20),
                 bottom: rsui(1),
@@ -52,11 +52,11 @@ const Settings = () => {
               Bizi Paylaş
             </Text>
           </View>
-          <View style={{flexDirection: 'row', left: rs(15), top: rsui(80)}}>
+          <View style={{flexDirection: 'row', left: rs(15), top: rsui(55)}}>
             <Icons.Security />
             <Text
               style={{
-                fontSize: 19,
+                fontSize: rsui(9),
                 fontFamily: 'PlusJakartaSans-Regular',
                 left: rs(20),
                 bottom: rsui(1),

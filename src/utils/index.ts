@@ -1,4 +1,7 @@
-import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp
+} from 'react-native-responsive-screen';
 
 export function rs(size: number) {
   return wp((size / 375) * 100);
@@ -6,5 +9,5 @@ export function rs(size: number) {
 
 export function rsui(size: number) {
   'worklet';
-  return wp((size / 375) * 100);
+  return hp((size / 375) * 100);
 }

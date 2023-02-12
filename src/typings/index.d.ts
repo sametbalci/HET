@@ -16,12 +16,17 @@ declare global {
   type RootStackProps = {
     Walkthrough: NavigatorScreenParams<WalkthroughStackProps>;
     Main: NavigatorScreenParams<BottomBarProps>;
+    Detail: NavigatorScreenParams<StackProps>;
   };
 
   type WalkthroughStackProps = {
     One: undefined;
     Two: undefined;
     Three: undefined;
+  };
+  type StackProps = {
+    CategoryDetail: undefined;
+    LocationDetail: undefined;
   };
 
   type BottomBarProps = {
